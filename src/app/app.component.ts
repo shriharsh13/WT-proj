@@ -14,5 +14,5 @@ export class AppComponent {
       $("#wrapper").toggleClass("toggled");
     });
   }
-  
 }
+  
