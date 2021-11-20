@@ -1,0 +1,27 @@
+
+<div class="post-container" multi="true" *ngIf="posts.length > 0" >
+    <div class="post-created" *ngFor="let post of posts">
+    <div class="user-profile">
+        <img src="#">
+        <div>
+            <p>Somu Sharma</p>
+            <span>date</span>
+        </div>
+    </div>
+   <!-- <p>{{ newPost }}</p>   -->
+   
+    <div class="post-input-container">
+         {{ post.content }} 
+         </div>
+         <button  type="button" class="btn btn-primary"> Reply </button> 
+         <button  type="button" class="btn btn-warning"> Edit </button> 
+         <button  type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
+     <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
+        <div class="container" >
+
+               -->
+       
+          </div>
+</div>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">NO posts added yet!</p>
+ 

@@ -1,0 +1,30 @@
+<div class="write-post-container">
+    <div class="user-profile">
+        <img src="#">
+        <div>
+            <p>Somu Sharma</p>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+            
+        </div>
+    </div>
+    <form (submit)="onAddposts(postForm)" #postForm="ngForm">
+    <div class="post-input-container">
+        <textarea rows="6" placeholder="WHAT'S YOUR QUERY... ???" name="content" ngModel required minlength="8" #content="ngModel"></textarea>
+        <mat-error *ngIf="content.invalid">Please add youe Query</mat-error>
+        <div class="add-post-links">
+            <button 
+             type="submit"
+             class="btn btn-dark"> 
+             Post </button> 
+        </div>
+    </div>   
+    </form>
+</div>
+
+
+

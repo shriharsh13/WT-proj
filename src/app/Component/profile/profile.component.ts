@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+ 
 
   constructor(private router:Router) { }
 
