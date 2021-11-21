@@ -1,5 +1,6 @@
 
-<div class="post-container" multi="true" *ngIf="posts.length > 0" >
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="post-container" multi="true" *ngIf="posts.length > 0 && !isLoading" >
     <div class="post-created" *ngFor="let post of posts">
     <div class="user-profile">
         <img src="#">
@@ -23,5 +24,5 @@
        
           </div>
 </div>
-<p class="info-text mat-body-1" *ngIf="posts.length <= 0">NO posts added yet!</p>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">NO posts added yet!</p>
  

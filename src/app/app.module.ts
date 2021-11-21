@@ -6,17 +6,22 @@ import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {HttpClientModule} from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { HeaderComponent } from "./header/header.component";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './Component/profile/profile.component';
-import { LoginComponent } from './Component/login/login.component';
 import { HomeComponent } from './Component/home/home.component';
 import { Post } from './Component/posts/post.model';
 import { PostCreateComponent } from './Component/posts/post-create/post-create.component';
 import { ReplyComponent } from './Component/posts/reply/reply.component';
 import { PostsComponent } from './Component/posts/posts.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/login/signup.component';
+import { AuthInterseptor } from './auth/auth-interceptor';
 
 
 @NgModule({
@@ -24,11 +29,12 @@ import { PostsComponent } from './Component/posts/posts.component';
     AppComponent,
     HeaderComponent,
     ProfileComponent,
-    LoginComponent,
     HomeComponent,
     PostsComponent,
     PostCreateComponent,
-    ReplyComponent
+    ReplyComponent,
+    LoginComponent,
+    SignupComponent
   
   ],
   imports: [
@@ -38,12 +44,14 @@ import { PostsComponent } from './Component/posts/posts.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatExpansionModule,
+    MatCardModule,
     MatToolbarModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     HttpClientModule
   ],
 
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterseptor,multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

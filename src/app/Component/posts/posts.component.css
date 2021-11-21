@@ -6,7 +6,9 @@
     color: #626262;
     margin-top: 50px;
 }
-
+mat-spinner{
+    margin: auto;
+}
 .user-profile{
     display: flex;
     align-items: center;
