@@ -9,6 +9,7 @@
     // changes done
     "noImplicitAny": false,
    // "noImplicitReturns": true,
+   "strictPropertyInitialization": false,
 
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,

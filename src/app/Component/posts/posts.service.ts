@@ -3,6 +3,8 @@ import { Subject }from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { PostsComponent } from "./posts.component";
+import { Content } from "@angular/compiler/src/render3/r3_ast";
 
 
 
@@ -42,6 +44,10 @@ export class PostService {
         return this.postsUpdated.asObservable();
 
     }
+
+    getPost( id: any){
+        return{...this.posts.find(p => p.id === id)};
+    }
     //dependecy injection(dynamic feature of eventemiiter(/))
     addPost(content: string){
         const post: Post = {  id: null , content: content};
@@ -54,6 +60,12 @@ export class PostService {
             this.postsUpdated.next([...this.posts]);
         });
   
+    }
+
+    updatePost(id: any,content: string){
+        const post: Post ={id: id, content: content};
+        this.http.put("http://localhost:3000/api/posts/" + id, post)
+        .subscribe(response => console.log(response));
     }
 
     deletePost(postId: any) {

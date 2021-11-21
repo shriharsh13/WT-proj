@@ -14,7 +14,7 @@
          {{ post.content }} 
          </div>
          <button  type="button" class="btn btn-primary"> Reply </button> 
-         <button  type="button" class="btn btn-warning"> Edit </button> 
+         <a mat-button color="Primary" [routerLink]="['/edit',post.id]">EDIT</a>
          <button  type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
      <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
         <div class="container" >

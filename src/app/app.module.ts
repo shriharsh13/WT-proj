@@ -5,8 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
-
+import { HeaderComponent } from "./header/header.component";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './Component/profile/profile.component';
@@ -18,10 +19,10 @@ import { ReplyComponent } from './Component/posts/reply/reply.component';
 import { PostsComponent } from './Component/posts/posts.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     ProfileComponent,
     LoginComponent,
     HomeComponent,
@@ -37,6 +38,7 @@ import { PostsComponent } from './Component/posts/posts.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatExpansionModule,
+    MatToolbarModule,
     MatButtonModule,
     HttpClientModule
   ],
