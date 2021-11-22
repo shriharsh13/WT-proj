@@ -6,7 +6,7 @@
         <img src="#">
         <div>
             <p>Somu Sharma</p>
-            <span>date</span>
+            <h4>24/11/2021</h4>
         </div>
     </div>
    <!-- <p>{{ newPost }}</p>   -->
@@ -14,13 +14,15 @@
     <div class="post-input-container">
          {{ post.content }} 
          </div>
-         <button  type="button" class="btn btn-primary"> Reply </button> 
-         <a mat-button color="Primary" [routerLink]="['/edit',post.id]">EDIT</a>
-         <button  type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
+         <button style='margin-right:16px' type="button" class="btn btn-primary"> Reply </button> 
+         <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Edit </button> 
+         <button style='margin-right:16px' type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
      <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
         <div class="container" >
 
                -->
+               <hr>
+               
        
           </div>
 </div>

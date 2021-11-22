@@ -10,7 +10,7 @@ import { SignupComponent } from './auth/signup/login/signup.component';
 
 
 const routes: Routes = [
-{ path: '', component: PostsComponent},
+{ path: '', component: HomeComponent},
 { path: 'create', component: PostCreateComponent},
 { path: 'edit/:postId', component: PostCreateComponent},
 {path:'home' ,component: HomeComponent},

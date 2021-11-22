@@ -6,34 +6,45 @@
     color: #626262;
     margin-top: 50px;
 }
-mat-spinner{
-    margin: auto;
-}
+
 .user-profile{
     display: flex;
     align-items: center;
+    padding-top: 30px;
 }
 
-.user-profile img{
-    width: 45px;
-    border-radius: 50%;
-    margin-right: 10px;
+mat-spinner{
+    margin: auto;
 }
+
+
 
 .user-profile p{
     margin-bottom: 5px;
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-family: 'Anton', sans-serif;
+font-family: 'Baloo 2', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Questrial', sans-serif;
+    color: rgb(32, 30, 30);
+}
+
+.user-profile h4{
+    font-size: small;
+    color: black;
 }
 
 .user-profile small{
     font-size: 12px;
-
+   
 }
 
 .post-input-container{
     padding-left: 55px;
     padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 .post-input-container textarea{
@@ -43,24 +54,24 @@ mat-spinner{
     border-bottom: 1px solid #ccc;
     background: transparent;
     resize: none;
+  
 
 }
 
 .post-container{
     width: 100%;
-    background: #626262;
+    background: rgb(192, 192, 192);
     border-radius: 6px;
     padding:20px ;
-    color: #fff;
+    color: rgb(7, 7, 7);
     display:block;
     margin-top: 1rem ;
+    font-family: 'Anton', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Questrial', sans-serif;
 }
 
-.user-profile span{
-    font-size: 13px;
-    color:#fff;
 
-}
 .post-text{
     color:#fff;
     margin: 15px 0;
@@ -76,4 +87,5 @@ mat-spinner{
     text-align: center;
     font-weight: 600;
     font-size:medium;
+    color: whitesmoke;
 }

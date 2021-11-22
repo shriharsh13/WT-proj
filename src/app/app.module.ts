@@ -22,6 +22,7 @@ import { PostsComponent } from './Component/posts/posts.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/login/signup.component';
 import { AuthInterseptor } from './auth/auth-interceptor';
+import { NavbarComponent } from './Component/navbar/navbar.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AuthInterseptor } from './auth/auth-interceptor';
     PostCreateComponent,
     ReplyComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NavbarComponent
   
   ],
   imports: [
