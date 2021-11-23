@@ -31,7 +31,7 @@ isLoading= false;
         this.isLoading= true;
         this.postsService.getPost(this.postId).subscribe(postData => {
           this.isLoading= false;
-          this.post = {id: postData._id, content: postData.content};
+          this.post = {id: postData._id, content: postData.content, creator: postData.creator};
         });
       }else{
         this.mode="create";
@@ -49,7 +49,7 @@ isLoading= false;
     }else{
       this.postsService.updatePost(this.postId,form.value.content)
     }
-  const post: Post = { id:null,content: form.value.content  } ;
+  const post: Post = { id:null,content: form.value.content, creator: this.postsService.getPost} ;
    
    form.resetForm();
   }

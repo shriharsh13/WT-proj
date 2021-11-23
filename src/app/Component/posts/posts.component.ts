@@ -20,6 +20,7 @@ userIsAuthenticated= false;
 totalPosts = 0;
 postsPerPage = 2;
 currentPage = 1;
+userId: string;
 pageSizeOptions = [1, 2, 5, 10];
   constructor(public postsService: PostService, private authService: AuthSevice) { 
 
@@ -28,6 +29,7 @@ pageSizeOptions = [1, 2, 5, 10];
   ngOnInit(){
     this.isLoading=true;
     this.postsService.getPosts(this.postsPerPage, this.currentPage);
+    this.userId= this.authService.getUserId();
     
     this.postsSub = this.postsService
     .getPostUpdateListener()
@@ -41,6 +43,7 @@ pageSizeOptions = [1, 2, 5, 10];
     .getAuthStatusListener()
     .subscribe(isAuthenticated =>{
       this.userIsAuthenticated= isAuthenticated;
+      this.userId= this.authService.getUserId();
     });
   }
 

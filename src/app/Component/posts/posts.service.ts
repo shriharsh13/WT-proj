@@ -29,11 +29,13 @@ export class PostService {
             return {posts: postData.posts.map(post => {
                 return {
                     content: post.content,
-                    id: post._id
+                    id: post._id,
+                    creator: post.creator 
                 };
             }),maxPosts: postData.maxPosts};
         }))
         .subscribe(transformedPostData => {
+            console.log(transformedPostData);
             this.posts = transformedPostData.posts;
             this.postsUpdated.next({
                 posts: [...this.posts], 
@@ -49,11 +51,11 @@ export class PostService {
     }
 
     getPost( id: any){
-        return this.http.get<{_id: string, content: string}>("http://localhost:3000/api/posts/" + id);
+        return this.http.get<{_id: string; content: string; creator: any}>("http://localhost:3000/api/posts/" + id);
     }
     //dependecy injection(dynamic feature of eventemiiter(/))
     addPost(content: string){
-        const post: Post = {  id: null , content: content};
+        const post: Post = {  id: null , content: content,creator:""};
         this.http
         .post<{message: string, postId: any}>('http://localhost:3000/api/posts',post)
         .subscribe((responseData) => {
@@ -64,7 +66,7 @@ export class PostService {
     }
 
     updatePost(id: any,content: string){
-        const post: Post ={id: id, content: content};
+        const post: Post ={id: id, content: content,creator: ""};
         this.http
         .put("http://localhost:3000/api/posts/" + id, post)
         .subscribe(response => {

@@ -22,12 +22,17 @@ checkAuth,
   router.put("/:id",checkAuth, (req,res,next)=>{
     const post= new Post({
       content: req.body.content,
-      _id: req.body.id
+      _id: req.body.id,
+      creator: req.userData.userId
       
     });
-    Post.updateOne({_id: req.params.id}, post).then(result =>{
-      console.log(result);
-      res.status(200).json({message: 'Update Successful!'})
+    Post.updateOne({_id: req.params.id,creator: req.userData.userId}, post).then(result =>{
+      if(result.modifiedCount>0){
+        res.status(200).json({message: 'Update Successful!'});
+      }else{
+        res.status(401).json({message: 'Not authorized!'});
+      }
+      
     })
   });
   
@@ -64,9 +69,12 @@ checkAuth,
   });
   
   router.delete("/:id",checkAuth, (req, res, next) => {
-      Post.deleteOne({_id: req.params.id}).then(result => {
-        console.log(result);
-        res.status(200).json({ message: "Post deleted!" });
+      Post.deleteOne({_id: req.params.id, creator: req.userData.userId}).then(result => {
+        if(result.deletedCount>0){
+          res.status(200).json({message: 'Deletion Successful!'});
+        }else{
+          res.status(401).json({message: 'Not authorized!'});
+        }
       });
   });
 
