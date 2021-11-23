@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthSevice } from './auth/auth.service';
 
 
 @Component({
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
+export class AppComponent  implements OnInit{
 
-  constructor() { }
+  constructor(private authService: AuthSevice) {}
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.authService.autoAuthUser();
   }
 
 }

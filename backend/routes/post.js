@@ -8,7 +8,8 @@ router.post("",
 checkAuth,
  (req, res, next) => {
     const post = new Post({
-      content: req.body.content
+      content: req.body.content,
+      creator: req.userData.userId
     });
    post.save().then(createdPost => {
     res.status(201).json({

@@ -7,7 +7,7 @@ import { AuthSevice } from "../../auth.service";
     styleUrls:['./signup.component.css']
 })
 export class SignupComponent{
-    isLoading:false;
+    isLoading=false;
 
     constructor(public authService:AuthSevice){
 
@@ -17,6 +17,7 @@ export class SignupComponent{
         if(form.invalid){
             return;
         }
+        this.isLoading=true;
         this.authService.createUser(form.value.email,form.value.password);
     }
 }

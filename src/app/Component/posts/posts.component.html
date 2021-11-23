@@ -3,7 +3,6 @@
 <div class="post-container" multi="true" *ngIf="posts.length > 0 && !isLoading" >
     <div class="post-created" *ngFor="let post of posts">
     <div class="user-profile">
-        <img src="#">
         <div>
             <p>Somu Sharma</p>
             <h4>24/11/2021</h4>
@@ -14,13 +13,13 @@
     <div class="post-input-container">
          {{ post.content }} 
          </div>
+         <div *ngIf="userIsAuthenticated">
          <button style='margin-right:16px' type="button" class="btn btn-primary"> Reply </button> 
          <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Edit </button> 
          <button style='margin-right:16px' type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
      <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
-        <div class="container" >
-
-               -->
+        <div class="container" >-->
+        </div>
                <hr>
                
        

@@ -17,12 +17,13 @@
     </div>
   
     <div class="navPages">
-      <a mat-button class="buttonIcon" routerLink="home">Home</a>
-      <a mat-button class="buttonIcon" routerLink="create">Ask your Queries</a>
+      <a mat-button class="buttonIcon" routerLink="home" routerLinkActive="mat-accent">Home</a>
+      <a mat-button class="buttonIcon" routerLink="create" *ngIf="userIsAuthenticated">Ask your Queries</a>
       <a mat-button class="buttonIcon" routerLink="community">Community</a>
       <a mat-button class="buttonIcon" routerLink="About us">About us</a>
-      <a mat-raised-button class="buttonIcon" routerLink="login">login</a>
-      <a mat-raised-button class="buttonIcon" routerLink="signup">signup</a>
+      <a mat-raised-button class="buttonIcon" routerLink="login" routerLinkActive="mat-accent" *ngIf="!userIsAuthenticated">login</a>
+      <a mat-raised-button class="buttonIcon" routerLink="signup" routerLinkActive="mat-accent" *ngIf="!userIsAuthenticated">signup</a>
+      <button mat-raised-button class="buttonIcon" *ngIf="userIsAuthenticated" (click)="OnLogout()">Logout</button>
     </div>
   </mat-toolbar>
   
