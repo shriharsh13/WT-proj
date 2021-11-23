@@ -1,12 +1,45 @@
 .write-post-container{
     width: 70%;
-    background: rgb(234, 226, 235);
-    border-radius: 6px;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
     padding: 20px;
-    color: #626262;
+    color: #ffffff;
     margin: auto;
     margin-top: 150px;
+
     
+}
+
+.effect8
+{
+  -webkit-box-shadow: 26px 31px 32px 5px rgba(5,5,5,0.84);
+-moz-box-shadow: 26px 31px 32px 5px rgba(5,5,5,0.84);
+box-shadow: 26px 31px 32px 5px rgba(5,5,5,0.84);
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
 }
 
 .user-profile{

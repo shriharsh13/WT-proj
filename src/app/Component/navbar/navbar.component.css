@@ -1,18 +1,18 @@
 .navBar {
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    
   }
   
-  img {
-    margin: 5px;
-    margin-bottom: 10px;
-  }
-  .siteName {
+
+  .WebsiteName {
     font-family: "Cookie";
     font-family: "Irish Grover";
     font-size: medium;
     font-weight: 500px;
     font-size: 25px;
+    color: white;
   }
   a {
     justify-content: space-between;
@@ -21,6 +21,7 @@
     font-size: medium;
     font-weight: 500px;
     text-decoration: none;
+    color: rgb(250, 250, 250);
   }
   
   .formOutline {
