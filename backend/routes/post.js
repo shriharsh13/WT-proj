@@ -32,13 +32,24 @@ checkAuth,
   });
   
   router.get("", (req, res, next) => {
-   Post.find()
-   .then(documents => {
-     console.log(documents);
+    const pageSize = +req.query.pagesize;
+    const currentPage = +req.query.page;
+    const postQuery = Post.find();
+    let fetchedPosts
+    if (pageSize && currentPage)  {
+        postQuery
+        .skip(pageSize * (currentPage - 1))
+        .limit(pageSize);
+    }
+   postQuery.then(documents => {
+     fetchedPosts = documents;
+     return Post.count();
+   }).then(count => {
      res.status(200).json({
-      message: "Posts fetched successfully!",
-      posts: documents
-   });
+        message: "Posts fetched successfully!",
+        posts: fetchedPosts,
+        maxPosts: count
+     });
   });
   });
   

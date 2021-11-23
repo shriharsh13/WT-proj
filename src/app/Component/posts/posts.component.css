@@ -12,6 +12,9 @@
     align-items: center;
     padding-top: 30px;
 }
+mat-paginator{
+    margin-top: 1rem;
+}
 
 mat-spinner{
     margin: auto;

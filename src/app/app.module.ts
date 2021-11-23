@@ -8,6 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { HeaderComponent } from "./header/header.component";
@@ -50,7 +51,9 @@ import { NavbarComponent } from './Component/navbar/navbar.component';
     MatToolbarModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
+
   ],
 
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterseptor,multi: true}],
