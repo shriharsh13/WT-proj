@@ -11,15 +11,25 @@
    <!-- <p>{{ newPost }}</p>   -->
    
     <div class="post-input-container">
-         {{ post.content }} 
+        <h1>{{post.title}}</h1>
+        {{ post.content }} 
          </div>
          <div *ngIf="userIsAuthenticated && userId=== post.creator">
-         <button style='margin-right:16px' type="button" class="btn btn-primary"> Reply </button> 
          <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Edit </button> 
          <button style='margin-right:16px' type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
      <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
         <div class="container" >-->
         </div>
+        <!-- <hr>
+        <div class="post-input-container">
+            <textarea rows="2" placeholder="Reply to this query"></textarea>
+            <div class="add-post-links">
+                <button 
+                 type="submit"
+                 class="btn btn-dark"> 
+                 Reply </button> 
+            </div>
+        </div>  -->
                <hr>
                
        

@@ -8,6 +8,7 @@ router.post("",
 checkAuth,
  (req, res, next) => {
     const post = new Post({
+      title: req.body.title,
       content: req.body.content,
       creator: req.userData.userId
     });
@@ -21,6 +22,7 @@ checkAuth,
   
   router.put("/:id",checkAuth, (req,res,next)=>{
     const post= new Post({
+      title: req.body.title,
       content: req.body.content,
       _id: req.body.id,
       creator: req.userData.userId

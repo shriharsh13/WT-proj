@@ -10,6 +10,9 @@
     <mat-spinner *ngIf="isLoading"></mat-spinner>
    
     <div class="post-input-container">
+        <textarea name="title" placeholder="Post Title" [ngModel]="post?.title" required minlength="8" #title="ngModel"></textarea>
+        <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+        <hr>
         <textarea rows="6" placeholder="WHAT'S YOUR QUERY... ???" name="content" [ngModel]="post?.content" required minlength="8" #content="ngModel"></textarea>
         <mat-error *ngIf="content.invalid">Please add youe Query</mat-error>
         <div class="add-post-links">
@@ -19,7 +22,7 @@
              Post </button> 
         </div>
    
-    </div>    
+    </div>   
 </div>
 </form>
 
