@@ -5,7 +5,7 @@
     <div class="user-profile">
         <div>
             <p>Somu Sharma</p>
-            <h4>24/11/2021</h4>
+    {{ myDate | date: 'short' }}
         </div>
     </div>
    <!-- <p>{{ newPost }}</p>   -->
@@ -14,8 +14,9 @@
         <h1>{{post.title}}</h1>
         {{ post.content }} 
          </div>
-         <div *ngIf="userIsAuthenticated && userId=== post.creator">
-         <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Edit </button> 
+         <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Reply </button> 
+         <div class="button1"  *ngIf="userIsAuthenticated && userId=== post.creator">
+         <!-- <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Reply </button>  -->
          <button style='margin-right:16px' type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
      <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
         <div class="container" >-->

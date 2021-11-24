@@ -1,4 +1,4 @@
-<form (submit)="onSaveposts(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+<form (submit)="onSaveposts(postForm)" #postForm="ngForm" *ngIf="!isLoading" ng-click="A()">
 <div class="write-post-container effect8">
     <div class="user-profile">
         <div>
@@ -10,11 +10,11 @@
     <mat-spinner *ngIf="isLoading"></mat-spinner>
    
     <div class="post-input-container">
-        <textarea name="title" placeholder="Post Title" [ngModel]="post?.title" required minlength="8" #title="ngModel"></textarea>
-        <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
-        <hr>
-        <textarea rows="6" placeholder="WHAT'S YOUR QUERY... ???" name="content" [ngModel]="post?.content" required minlength="8" #content="ngModel"></textarea>
-        <mat-error *ngIf="content.invalid">Please add youe Query</mat-error>
+        <textarea name="title" placeholder="WHAT'S YOUR QUERY... ???" [ngModel]="post?.title" required minlength="8" #title="ngModel"></textarea>
+        <mat-error *ngIf="title.invalid">Please enter your Query.....</mat-error>
+      
+        <textarea rows="6" placeholder="Reply to the Query......" name="content" [ngModel]="post?.content" required minlength="8" #content="ngModel"></textarea>
+        <mat-error *ngIf="content.invalid">Please add Solution to the Query....</mat-error>
         <div class="add-post-links">
             <button 
              type="submit"

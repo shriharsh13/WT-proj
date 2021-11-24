@@ -1,11 +1,4 @@
-.write-post-container{
-    width: 100%;
-    background: rgb(71, 69, 69);
-    border-radius: 6px;
-    padding: 20px;
-    color: #626262;
-    margin-top: 50px;
-}
+
 
 .user-profile{
     display: flex;
@@ -25,17 +18,59 @@ mat-spinner{
 .user-profile p{
     margin-bottom: 5px;
     font-weight: 600;
-    font-size: medium;
-    font-family: 'Anton', sans-serif;
-font-family: 'Baloo 2', cursive;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Questrial', sans-serif;
-    color: rgb(32, 30, 30);
+    font-size: 20px;
+    font-family: 'Cookie', cursive;
+    font-family: 'Irish Grover', cursive;
+    color: rgb(255, 255, 255);
+    animation: Color 4s linear infinite;
+-webkit-animation: Color 4s ease-in-out infinite;
 }
+
+@keyframes Color{
+    0%{
+      color:#2cfae9;
+    }
+    
+    20%{
+      color:#4FC1E9;
+    }
+    
+    100%{
+      color:#9575e6;
+    }
+  }
+  @-moz-keyframes Color{
+    0%{
+      color:#2cfae9;
+    }
+    
+    20%{
+      color:#4FC1E9;
+    }
+    
+    100%{
+      color:#9575e6;
+    }
+  }
+  
+  @-webkit-keyframes Color{
+    0%{
+      color:#2cfae9;
+    }
+    
+    20%{
+      color:#4FC1E9;
+    }
+    
+    100%{
+      color:#9575e6;
+    }
+  }
+
 
 .user-profile h4{
     font-size: small;
-    color: black;
+    color: rgb(255, 254, 254);
 }
 
 .user-profile small{
@@ -63,17 +98,23 @@ font-family: 'Questrial', sans-serif;
 
 .post-container{
     width: 100%;
-    background: rgb(192, 192, 192);
+    background: rgb(0, 0, 0);
     border-radius: 6px;
     padding:20px ;
-    color: rgb(7, 7, 7);
+    color: rgb(255, 255, 255);
     display:block;
-    margin-top: 1rem ;
+    margin-top: 3rem ;
     font-family: 'Anton', sans-serif;
 font-family: 'Permanent Marker', cursive;
 font-family: 'Questrial', sans-serif;
+-webkit-box-shadow: 3px 0px 27px 4px rgba(0,0,0,0.79);
+-moz-box-shadow: 3px 0px 27px 4px rgba(0,0,0,0.79);
+box-shadow: 3px 0px 27px 4px rgba(0,0,0,0.79);
 }
 
+.button1{
+    margin-left: 480px;
+}
 
 .post-text{
     color:#fff;
@@ -90,5 +131,12 @@ font-family: 'Questrial', sans-serif;
     text-align: center;
     font-weight: 600;
     font-size:medium;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
+}
+
+mat-paginator{
+    background-color: rgb(75, 69, 69);
+    color:white;
+    border-color: white;
+   
 }
