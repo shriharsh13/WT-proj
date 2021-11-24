@@ -1,12 +1,14 @@
+<form (submit)="onSaveposts(postForm)" #postForm="ngForm" *ngIf="!isLoading">
 <div class="write-post-container effect8">
     <div class="user-profile">
         <div>
             <p>Somu Sharma</p>
             
+            
         </div>
     </div>
     <mat-spinner *ngIf="isLoading"></mat-spinner>
-    <form (submit)="onSaveposts(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+   
     <div class="post-input-container">
         <textarea rows="6" placeholder="WHAT'S YOUR QUERY... ???" name="content" [ngModel]="post?.content" required minlength="8" #content="ngModel"></textarea>
         <mat-error *ngIf="content.invalid">Please add youe Query</mat-error>
@@ -16,9 +18,10 @@
              class="btn btn-dark"> 
              Post </button> 
         </div>
-    </div>   
-    </form>
+   
+    </div>    
 </div>
+</form>
 
 
 

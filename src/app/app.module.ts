@@ -24,6 +24,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/login/signup.component';
 import { AuthInterseptor } from './auth/auth-interceptor';
 import { NavbarComponent } from './Component/navbar/navbar.component';
+import { AboutUsComponent } from './Component/about-us/about-us.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { NavbarComponent } from './Component/navbar/navbar.component';
     ReplyComponent,
     LoginComponent,
     SignupComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutUsComponent
   
   ],
   imports: [

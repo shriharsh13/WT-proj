@@ -47,20 +47,66 @@ box-shadow: 26px 31px 32px 5px rgba(5,5,5,0.84);
     align-items: center;
 }
 
-.user-profile img{
-    width: 45px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
 
 .user-profile p{
-    margin-bottom: 5px;
+padding-bottom: 10px;
+ 
     font-weight: 600;
-    font-family: 'Baloo 2', cursive;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Questrial', sans-serif;
-color: rgb(32, 30, 30);
+    font-family: 'Cookie', cursive;
+    font-family: 'Irish Grover', cursive;
+color:white;
+font-size: 30px;
+animation: Color 4s linear infinite;
+-webkit-animation: Color 4s ease-in-out infinite;
+
+
 }
+
+@keyframes Color{
+  0%{
+    color:#2cfae9;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  100%{
+    color:#9575e6;
+  }
+}
+@-moz-keyframes Color{
+  0%{
+    color:#2cfae9;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  100%{
+    color:#9575e6;
+  }
+}
+
+@-webkit-keyframes Color{
+  0%{
+    color:#2cfae9;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  100%{
+    color:#9575e6;
+  }
+}
+  
+ mat-error{
+    color: skyblue;
+  
+ }
 
 .user-profile small{
     font-size: 12px;
@@ -79,6 +125,7 @@ color: rgb(32, 30, 30);
     border-bottom: 1px solid #ccc;
     background: transparent;
     resize: none;
+    color:rgb(204, 195, 195);
     font-family: 'Anton', sans-serif;
     font-size: medium;
 
@@ -86,10 +133,10 @@ color: rgb(32, 30, 30);
 
 .post-container{
     width: 100%;
-    background: #626262;
+    background:rgb(204, 195, 195);
     border-radius: 6px;
     padding:20px ;
-    color: #fff;
+    color: rgb(255, 255, 255);
     margin: 20px 0;
     resize: none;
 }
@@ -100,69 +147,13 @@ color: rgb(32, 30, 30);
 
 }
 .post-text{
-    color:#fff;
+    color:rgb(0, 0, 0);
     margin: 15px 0;
     font-size: 15px;
 }
 
-
-
-
- /* style select option */
-
- select {
-
-    /* styling */
-    background-color: white;
-    border: thin solid rgb(50, 50, 56);
-    border-radius: 4px;
-    display: inline-block;
-    font: inherit;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-  
-    /* reset */
-  
-    margin: 0;      
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-  
-
+.add-post-links{
  
-select.classic {
-    background-image:
-      linear-gradient(45deg, transparent 50%, blue 50%),
-      linear-gradient(135deg, blue 50%, transparent 50%),
-      linear-gradient(to right, skyblue, skyblue);
-    background-position:
-      calc(100% - 20px) calc(1em + 2px),
-      calc(100% - 15px) calc(1em + 2px),
-      100% 0;
-    background-size:
-      5px 5px,
-      5px 5px,
-      2.5em 2.5em;
-    background-repeat: no-repeat;
-  }
+  margin-left: 900px ;
   
-  select.classic:focus {
-    background-image:
-      linear-gradient(45deg, white 50%, transparent 50%),
-      linear-gradient(135deg, transparent 50%, white 50%),
-      linear-gradient(to right, gray, gray);
-    background-position:
-      calc(100% - 15px) 1em,
-      calc(100% - 20px) 1em,
-      100% 0;
-    background-size:
-      5px 5px,
-      5px 5px,
-      2.5em 2.5em;
-    background-repeat: no-repeat;
-    border-color: grey;
-    outline: 0;
-  }
+}
