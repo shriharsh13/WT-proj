@@ -4,7 +4,7 @@
     <div class="post-created" *ngFor="let post of posts">
     <div class="user-profile">
         <div>
-            <p>Somu Sharma</p>
+            <p>{{post.name}}</p>
     {{ myDate | date: 'short' }}
         </div>
     </div>
@@ -12,14 +12,11 @@
    
     <div class="post-input-container">
         <h1>{{post.title}}</h1>
-        {{ post.content }} 
+        <h3>{{ post.content }} </h3>
          </div>
          <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Reply </button> 
          <div class="button1"  *ngIf="userIsAuthenticated && userId=== post.creator">
-         <!-- <button style='margin-right:16px' type="button" class="btn btn-dark" [routerLink]="['/edit',post.id]"> Reply </button>  -->
-         <button style='margin-right:16px' type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button> 
-     <!-- <textarea rows="2"  [(ngModel)]="enteredReply"></textarea>
-        <div class="container" >-->
+         <button style='margin-right:16px' type="button" class="btn btn-danger" (click)="onDelete(post.id)"> Delete </button>
         </div>
         <!-- <hr>
         <div class="post-input-container">

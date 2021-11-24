@@ -3,5 +3,6 @@ export interface Post {
     title: string;
     content?: string;
     creator:any
+    name:any
   }
   
