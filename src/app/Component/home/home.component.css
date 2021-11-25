@@ -14,7 +14,7 @@
     box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.62);
 }
 .right-sidebar{
-    background-color:#DFDFDF;
+    background-color:#000000;
     flex-basis: 25%;
     position:sticky;
     top: 100px;
@@ -22,12 +22,17 @@
     align-self: flex-start;
     padding: 20px;
     border-radius: 20px;
-    color:#fff;
+    color:rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.62);
+    box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.62);
    
 }
 
 .main-content{
     flex-basis: 47%;
+    margin-top: 50px;
+    height: 1500px;
 
 }
 .imp-links a{
@@ -44,6 +49,9 @@
     width: fit-content;
 }
 
+.imp-links a:first-child{
+    color:skyblue;
+}
 .imp-links a:last-child{
     color: blue;
 }
@@ -58,13 +66,14 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 18px;
+   
     
 }
 .sidebar-title h4{
     font-family: 'Anton', sans-serif;
     font-weight: 600;
     font-size:medium;
-    color:black;
+    color:rgb(255, 253, 253);
     padding-top: 15px;
 }
 
@@ -87,7 +96,7 @@
     text-align: center;
     position: relative;
     overflow:hidden ;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 251, 251, 0.1);
 }
 
 .event p{
@@ -97,27 +106,27 @@
 .event a{
     font-size: 12px;
     text-decoration: none;
-    color: rgb(246, 1, 50);
+    color: rgb(255, 0, 0);
 }
 .left-event span{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
     font-size: 15px;
     padding: 2px 0 ;
 
 }
 .left-event h3{
-    color: black;
+    color: rgb(212, 212, 212);
     font-size: large;
     font-weight: 300;
 }
 
 .right-event h4{
-    color: black;
+    color: rgb(200, 200, 200);
     font-weight: 400;
     
 }

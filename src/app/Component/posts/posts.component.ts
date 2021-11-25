@@ -23,7 +23,7 @@ currentPage = 1;
 userId: string;
 pageSizeOptions = [1, 2, 5, 10];
 
-myDate = Date.now();
+// myDate = Date.now();
 
 
   constructor(public postsService: PostService, private authService: AuthSevice) { 
