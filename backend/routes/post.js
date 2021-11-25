@@ -30,7 +30,7 @@ checkAuth,
       name: req.userData.email
       
     });
-    Post.updateOne({_id: req.params.id,creator: req.userData.userId}, post).then(result =>{
+    Post.updateOne({_id: req.params.id}, post).then(result =>{
       if(result.modifiedCount>0){
         res.status(200).json({message: 'Update Successful!'});
       }else{

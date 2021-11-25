@@ -10,6 +10,7 @@ export class AuthSevice {
     private isAuthenticated = false;
     private tokenTimer: any;
     private userId: any;
+    private name:string;
 
     constructor(private http: HttpClient, private router: Router){}
 
@@ -28,8 +29,8 @@ export class AuthSevice {
         return this.authStatusListener.asObservable();
     }
     
-    createUser(email:string,password: string){
-        const authData: AuthData ={email: email, password: password};
+    createUser(name:string,email:string,password: string){
+        const authData: AuthData ={name: name,email: email, password: password};
         this.http.post("http://localhost:3000/api/user/signup", authData)
         .subscribe(response =>{
             console.log(response);
@@ -37,7 +38,8 @@ export class AuthSevice {
     }
 
     login(email: string, password: string){
-        const authData: AuthData ={email: email, password: password};
+        const authData: AuthData ={name: this.name,email: email, password: password};
+        console.log(authData.email);
         this.http.post<{token:string;expiresIn: number; userId: string}>("http://localhost:3000/api/user/login", authData)
         .subscribe(response =>{
             const token = response.token;
